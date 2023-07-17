@@ -1,0 +1,7 @@
+#ignorar archivos en el repositorio
+test.html
+test2.html
+estilosbkp.css
+/test
+/fondo
+/backup
