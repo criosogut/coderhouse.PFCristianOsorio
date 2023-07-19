@@ -1,5 +1,3 @@
-/* FORMULARIO DE CONTACTO */
-
 (function ($) {
     'use strict';
     var form = $('.contact__form'),
@@ -36,4 +34,3 @@
     });
  
   })(jQuery);
- 
