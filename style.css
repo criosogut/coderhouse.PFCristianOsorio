@@ -438,30 +438,7 @@ main{
   color: white;
 }
 
-/*FIN-FORMULARIO-NUEVO*/
-/*FIN-MIXIMEDIA*/
-@media screen and (min-width: 356px) {
-  #FORM_CONTACT {
-    background-color: #1d2d44;
-  }
-}
-@media screen and (min-width: 550px) {
-  #FORM_CONTACT {
-    background-color: #3e5c76;
-  }
-}
-@media screen and (min-width: 768px) {
-  #FORM_CONTACT {
-    background-color: #748cab;
-  }
-}
-@media screen and (min-width: 900px) {
-  #FORM_CONTACT {
-    background-color: #00a8e8;
-  }
-}
 
-/*FIN-MIXIMEDIA*/
 
 
 
@@ -475,7 +452,7 @@ main{
   color: #ffffff;
 }
 div#teams {
-  padding-top: 60px;
+  padding-top: 105px;
   padding-bottom: 30px;
 }
 .text-center {
