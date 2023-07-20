@@ -17,7 +17,7 @@ $background-color_7: rgba(144, 148, 150, 0.8);
 $color-sombra1: rgb(160, 160, 160);
 $font-family_1: 'calibri';
 /*CONTENEDORES*/
-#contenedor-maestro {
+#contenedor_maestro {
 	border: 5px double $color_borde_1;
 }
 #contenedor_columnas {
@@ -43,26 +43,26 @@ $font-family_1: 'calibri';
 	border: 1px solid $color_borde_1;
 	box-shadow: 0px 0px 10px $color-sombra1;
 }
-#contenedor-info1 {
+#contenedor_info1 {
 	background-image: url('img/raconto3.png');
 	background-size: cover;
-	grid-area: contenedor-info1;
+	grid-area: contenedor_info1;
 	background-color: $background-color_1;
 	border: 1px solid $color_borde_1;
 	text-align: center;
 }
-#contenedor-info2 {
+#contenedor_info2 {
 	background-image: url('img/mamut.png');
 	background-size: cover;
-	grid-area: contenedor-info2;
+	grid-area: contenedor_info2;
 	background-color: $background-color_2;
 	border: 1px solid $color_borde_1;
 	text-align: center;
 }
-#contenedor-info3 {
+#contenedor_info3 {
 	background-image: url('img/schipdog.png');
 	background-size: cover;
-	grid-area: contenedor-info3;
+	grid-area: contenedor_info3;
 	background-color: $background-color_3;
 	border: 1px solid $color_borde_1;
 	text-align: center;
@@ -91,7 +91,7 @@ $font-family_1: 'calibri';
 }
 /*NAVEGADOR*/
 /*INICIO CONTENEDOR GRID+AREAS*/
-#nuestros-clientes {
+#nuestros_clientes {
 	border: 1px solid $color_borde_1;
 	margin-top: 30px;
 	margin-bottom: 20px;
@@ -101,7 +101,7 @@ $font-family_1: 'calibri';
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	grid-template-rows: 1fr 1fr;
-	grid-template-areas: 'contenedor-info1 contenedor-info2''contenedor-info1 contenedor-info3';
+	grid-template-areas: 'contenedor_info1 contenedor_info2''contenedor_info1 contenedor_info3';
 }
 /*INICIO CONTENEDOR FLEX-GRID*/
 .contenedor-flex1 {
@@ -272,10 +272,10 @@ $font-family_1: 'calibri';
 /*INICIO-RRSS*/
 /*INICIO-MEDIA*/
 @media only screen and (max-width: 400px) {
-	#nuestros-clientes {
+	#nuestros_clientes {
 		grid-template-columns: 1fr 1fr;
 		grid-template-rows: 1fr 1fr;
-		grid-template-areas: 'contenedor-info1 contenedor-info1''contenedor-info2 contenedor-info3';
+		grid-template-areas: 'contenedor_info1 contenedor_info1''contenedor_info2 contenedor_info3';
 	}
 }
 @media screen and (min-width:380px) {

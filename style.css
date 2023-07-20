@@ -6,6 +6,14 @@
 
 
 
+/*01_NAVEGADOR*/
+#navegador {
+  border: 1px solid rgb(194, 173, 173);
+}
+.navbar-brand {
+  border: 1px solid rgb(194, 173, 173);
+}
+/*02_CONTENEDOR_BACKGROUND*/
 #contenedor_principal_background {
   margin-top: 115px;
   margin-bottom: 20px;
@@ -13,21 +21,96 @@
   height: 40%;
   background-image: url("img/pan-main.jpg");
   background-size: cover;
- 
+}
+/*03_CONTENEDOR-BIENVENIDO*/
+#nosotros_contenedor1 {
+  padding-top: 115px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/*04_CONTENEDOR-NUESTROSPRODUCTOS*/
+#productos_contenedor1 {
+  padding-top: 115px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+
+}
+/*05_CONTENEDOR-CLIENTES*/
+#clientes {
+  padding-top: 115px;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0px 0px 10px rgb(160, 160, 160);
+}
+/*06_CONTENEDOR-CLIENTES-GRIDAREAS*/
+#nuestros_clientes {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 30px;
+  text-align: center;
+  height: 50%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "contenedor_info1 contenedor_info2" "contenedor_info1 contenedor_info3";
+  gap: 20px;
+}
+/*07_CONTENEDOR-CLIENTES-GRIDAREAS*/
+#contenedor_info1 {
+  padding: 10px;
+  background-image: url("img/raconto3.png");
+  background-size: cover;
+  grid-area: contenedor_info1;
+  border: 1px solid rgb(189, 203, 228);
+  text-align: center;
 }
 
+#contenedor_info2 {
+  background-image: url("img/mamut.png");
+  background-size: cover;
+  grid-area: contenedor_info2;
+  border: 1px solid rgb(189, 203, 228);
+  text-align: center;
+}
+
+#contenedor_info3 {
+  background-image: url("img/schipdog.png");
+  background-size: cover;
+  grid-area: contenedor_info3;
+  border: 1px solid rgb(189, 203, 228);
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*CONTENEDOR-COLUMNAS*/
 #contenedor_columnas {
   text-align: center;
   box-shadow: 0px 0px 10px rgb(160, 160, 160);
 }
 
-#nosotros_contenedor1 {
-  margin-top: 10px;
-  margin-bottom: 20px;
-  text-align: center;
-  padding-top: 105px;
 
-}
+
+
+
+
+
+
+
 #nosotros_contenedor2 {
   margin-top: 30px;
   margin-bottom: 20px;
@@ -35,73 +118,16 @@
 }
 
 
-#productos_contenedor1 {
-  padding-top: 100px;
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  border: 1px solid rgb(189, 203, 228);
-}
 
-#client {
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  border: 1px solid rgb(189, 203, 228);
-  box-shadow: 0px 0px 10px rgb(160, 160, 160);
-}
 
-#contenedor-info1 {
-  background-image: url("img/raconto3.png");
-  background-size: cover;
-  grid-area: contenedor-info1;
-  background-color: yellow;
-  border: 1px solid rgb(189, 203, 228);
-  text-align: center;
-}
 
-#contenedor-info2 {
-  background-image: url("img/mamut.png");
-  background-size: cover;
-  grid-area: contenedor-info2;
-  background-color: violet;
-  border: 1px solid rgb(189, 203, 228);
-  text-align: center;
-}
 
-#contenedor-info3 {
-  background-image: url("img/schipdog.png");
-  background-size: cover;
-  grid-area: contenedor-info3;
-  background-color: thistle;
-  border: 1px solid rgb(189, 203, 228);
-  text-align: center;
-}
 
-/*CONTENEDORES*/
-/*NAVEGADOR*/
-.navbar-brand {
-  border: 1px solid rgb(194, 173, 173);
-}
 
-#navegador {
-  border: 1px solid rgb(194, 173, 173);
-}
 
-/*NAVEGADOR*/
-/*INICIO CONTENEDOR GRID+AREAS*/
-#nuestros-clientes {
-  border: 1px solid rgb(189, 203, 228);
-  margin-top: 30px;
-  margin-bottom: 20px;
-  text-align: center;
-  height: 50%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-template-areas: "contenedor-info1 contenedor-info2" "contenedor-info1 contenedor-info3";
-}
+
+
+
 
 /*INICIO CONTENEDOR FLEX-GRID*/
 .contenedor-flex1 {
@@ -281,10 +307,10 @@
 /*INICIO-RRSS*/
 /*INICIO-MEDIA*/
 @media only screen and (max-width: 400px) {
-  #nuestros-clientes {
+  #nuestros_clientes {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas: "contenedor-info1 contenedor-info1" "contenedor-info2 contenedor-info3";
+    grid-template-areas: "contenedor_info1 contenedor_info1" "contenedor_info2 contenedor_info3";
   }
 }
 @media screen and (min-width: 380px) {
