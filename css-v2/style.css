@@ -143,12 +143,14 @@
   width: 100%;
   position: relative;
   color: #ffffff;
+  padding-bottom: 30px;
 }
 
 div#teams {
   padding-top: 115px;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
 }
 
 .text-center {
@@ -199,6 +201,7 @@ div#teams {
   -webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
   overflow: hidden;
+  
 }
 
 .teams-item * {
@@ -257,11 +260,11 @@ div#teams {
 @media (max-width: 705.98px) {
   .teams-item-box {
     margin: 0 auto;
-    width: 300px;
+    width: 330px;
   }
  }
 
-/*equipo de trabajo*/
+
 /*formulario de contacto v2*/
 .contact {
   padding-top: -30px;
