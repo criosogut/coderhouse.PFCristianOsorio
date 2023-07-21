@@ -542,7 +542,7 @@
   <!--Formulario de contacto y googlemaps mejorado-->
   <div id="contact" class="contact">
     <div class="map">
-      <iframe height="400" id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4745.609652582416!2d-70.72316928315749!3d-32.74840977319447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968816cefaceff3d%3A0xe78fe92cd76f0758!2sPlaza%20De%20San%20Felipe!5e0!3m2!1ses-419!2scl!4v1686968608234!5m2!1ses-419!2scl"></iframe>
+      <iframe height="400" id="gmap_canvas" class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4745.609652582416!2d-70.72316928315749!3d-32.74840977319447!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x968816cefaceff3d%3A0xe78fe92cd76f0758!2sPlaza%20De%20San%20Felipe!5e0!3m2!1ses-419!2scl!4v1686968608234!5m2!1ses-419!2scl"></iframe>
     </div>
     <div id="contacto" class="container">
       <div class="row">
@@ -587,29 +587,29 @@
               <form class="contact__form" method="post" action="contact_mail.php">
                 <div class="row">
                   <div class="col-md-6 form-group">
-                    <input name="name" type="text" class="form-control" placeholder="Name" required>
+                    <input name="name" type="text" class="form-control" placeholder="Nombre" required>
                   </div>
                 <div class="col-md-6 form-group">
-                  <input name="email" type="email" class="form-control" placeholder="Email" required>
+                  <input name="email" type="email" class="form-control" placeholder="Correo" required>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input name="phone" type="text" class="form-control" placeholder="Phone" required>
+                  <input name="phone" type="text" class="form-control" placeholder="Teléfono" required>
                 </div>
                 <div class="col-md-6 form-group">
-                  <input name="subject" type="text" class="form-control" placeholder="Subject" required>
+                  <input name="subject" type="text" class="form-control" placeholder="Asunto" required>
                   </div>
                 <div class="col-12 form-group">
-                  <textarea name="message" class="form-control" rows="3" placeholder="Message" required></textarea>
+                  <textarea name="message" class="form-control" rows="3" placeholder="Mensaje" required></textarea>
                 </div>
                 <div class="col-12">
-                  <input name="submit" type="submit" class="button-style" value="Send Message">
+                  <input name="submit" type="submit" class="button-style" value="Enviar Mensaje">
                 </div>
               </div>
               </form>
               <div class="row">
                 <div class="col-12">
                   <div class="alert alert-success contact__msg" style="display: none" role="alert">
-                    Your message was sent successfully.
+                    Su mensaje fue enviado exitosamente.
                   </div>
                 </div>
               </div>
