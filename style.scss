@@ -1,35 +1,15 @@
+/*INICIO COLORES*/
 $color_1: #fff;
 $color_2: #0e2db8;
+/*FIN COLORES*/
+/*INICIO COLORES DE FONDO*/
 $background-color_1: #fff;
 $background-color_2: #5488a3;
 $background-color_3: #185E83;
 $background-color_4: rgba(144, 148, 150, 0.8);
-
-/*INICIO COLORES*/
-/*FIN COLORES*/
-/*INICIO COLORES DE FONDO*/
 /*FIN COLORES DE FONDO*/
 /*CONTENEDORES*/
 /*01_NAVEGADOR*/
-/*02_CONTENEDOR_BACKGROUND*/
-/*03_CONTENEDOR-BIENVENIDO*/
-/*04_CONTENEDOR-NUESTROSPRODUCTOS*/
-/*05_CONTENEDOR-CLIENTES*/
-/*06_CONTENEDOR-CLIENTES-GRIDAREAS*/
-/*07_CONTENEDOR-CLIENTES-GRIDAREAS*/
-/*CONTENEDOR-COLUMNAS*/
-/*INICIO BOTON-MODAL*/
-/*FIN BOTON-MODAL*/
-/*INICIO Ventana Modal*/
-/*FIN Ventana Modal*/
-/*INICIO-RRSS*/
-/*INICIO-RRSS*/
-/*INICIO-MEDIA*/
-/*FIN-MEDIA*/
-/*INICIO-RRSS-TRANSFORMACION-AUMENTADA*/
-/*FIN-RRSS-TRANSFORMACION-AUMENTADA*/
-/*INICIO-RRSS-TRANSICION-CUBIC-BEZIER*/
-/*FIN-RRSS-TRANSICION-CUBIC-BEZIER*/
 .navbar-brand {
 	border: 1px solid rgb(194, 173, 173);
 }
@@ -37,6 +17,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	border: 1px solid rgb(194, 173, 173);
 	padding-left: 30px;
 }
+/*02_CONTENEDOR_BACKGROUND*/
 #contenedor_principal_background {
 	margin-top: 115px;
 	margin-bottom: 20px;
@@ -45,6 +26,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	background-image: url("img/pan-main.jpg");
 	background-size: cover;
 }
+/*03_CONTENEDOR-BIENVENIDO*/
 #nosotros_contenedor1 {
 	padding-top: 100px;
 	margin-top: 30px;
@@ -55,12 +37,14 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	margin: 40px;
 	padding-bottom: 40px;
 }
+/*04_CONTENEDOR-NUESTROSPRODUCTOS*/
 #productos_contenedor1 {
 	padding-top: 100px;
 	margin-top: 30px;
 	margin-bottom: 20px;
 	text-align: center;
 }
+/*05_CONTENEDOR-CLIENTES*/
 #clientes {
 	padding-top: 100px;
 	margin-top: 30px;
@@ -68,6 +52,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	text-align: center;
 	box-shadow: 0px 0px 10px rgb(160, 160, 160);
 }
+/*06_CONTENEDOR-CLIENTES-GRIDAREAS*/
 #nuestros_clientes {
 	margin-top: 20px;
 	margin-bottom: 20px;
@@ -81,6 +66,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	grid-template-areas: "contenedor_info1 contenedor_info2" "contenedor_info1 contenedor_info3";
 	gap: 20px;
 }
+/*07_CONTENEDOR-CLIENTES-GRIDAREAS*/
 #contenedor_info1 {
 	padding: 10px;
 	background-image: url("img/raconto3.png");
@@ -103,6 +89,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	border: 1px solid rgb(189, 203, 228);
 	text-align: center;
 }
+/*CONTENEDOR-COLUMNAS*/
 #contenedor_columnas {
 	text-align: center;
 	box-shadow: 0px 0px 10px rgb(160, 160, 160);
@@ -112,6 +99,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	margin-bottom: 20px;
 	text-align: center;
 }
+/*INICIO BOTON-MODAL*/
 .boton-modal {
 	padding: 10px;
 	background-color: $background-color_1;
@@ -127,6 +115,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 		}
 	}
 }
+/*INICIO Ventana Modal*/
 #btn-modal {
 	display: none;
 	&:checked {
@@ -192,6 +181,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 	left: 0;
 	z-index: -1;
 }
+/*INICIO-RRSS*/
 .social-icons {
 	list-style: none;
 	padding: 0;
@@ -211,6 +201,7 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 		}
 	}
 }
+/*INICIO-RRSS-TRANSFORMACION-AUMENTADA*/
 .fa-facebook {
 	transition-property: transform;
 	transition-duration: 300ms;
@@ -259,9 +250,11 @@ $background-color_4: rgba(144, 148, 150, 0.8);
 		transform: scale(2);
 	}
 }
+/*INICIO-RRSS-TRANSICION-CUBIC-BEZIER*/
 .imagen {
 	transition: all 100ms ease-in 100ms;
 }
+/*INICIO-MEDIA*/
 @media only screen and (max-width: 400px) {
 	#nuestros_clientes {
 		grid-template-columns: 1fr 1fr;
