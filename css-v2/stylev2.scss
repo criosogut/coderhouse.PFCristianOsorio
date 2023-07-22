@@ -1,0 +1,333 @@
+/*Colores*/
+$color_1: #ffffff;
+$color_2: #00bcd4;
+$color_3: #2B2B2B;
+$color_4: #888;
+$color_5: #999;
+$color_6: #555;
+$color_7: rgb(0, 171, 201);
+/*fonts*/
+$font-family_1: 'Lato', Arial, sans-serif;
+$font-family_2: 'Oswald';
+/*Colores fondo*/
+$background-color_1: #56a1c4;
+$background-color_2: #c47135;
+$background-color_3: #f7f7f7;
+$background-color_4: #ffffff;
+$background-color_5: #27a599;
+$background-color_6: #ddd;
+/*bordes*/
+$border-color_1: transparent;
+$border-color_2: hsl(20, 16%, 96%);
+$border-color_3: #c47135;
+$border-bottom-color_1: currentcolor;
+/*boton enviar*/
+.button-style {
+	background-color: $background-color_1;
+	border: none;
+	color: $color_1;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 0.8rem;
+	line-height: 1em;
+	outline: none;
+	padding: 0.8rem 2.5rem 0.7rem;
+	position: relative;
+	text-transform: uppercase;
+	font-weight: 400;
+	text-decoration: none !important;
+	&:before {
+		border-color: $border-color_1;
+		-webkit-transition: all 0.25s;
+		transition: all 0.25s;
+		border-style: solid;
+		border-width: 0;
+		content: "";
+		height: 1.8rem;
+		position: absolute;
+		width: 1.8rem;
+		border-color: $border-color_2;
+		border-left-width: 2px;
+		border-top-width: 2px;
+		left: -5px;
+		top: -5px;
+	}
+	&:after {
+		border-color: $border-color_1;
+		-webkit-transition: all 0.25s;
+		transition: all 0.25s;
+		border-style: solid;
+		border-width: 0;
+		content: "";
+		height: 1.8rem;
+		position: absolute;
+		width: 1.8rem;
+		border-bottom-width: 2px;
+		border-color: $border-color_3;
+		border-right-width: 2px;
+		bottom: -5px;
+		right: -5px;
+	}
+	&:hover {
+		background-color: $background-color_2;
+		color: $color_1;
+		&:before {
+			height: 100%;
+			width: 100%;
+		}
+		&:after {
+			height: 100%;
+			width: 100%;
+		}
+	}
+}
+.showcase-btn {
+	margin: 1.3rem;
+}
+.button-style.hover {
+	background-color: $background-color_2;
+	color: $color_1;
+	&:before {
+		height: 100%;
+		width: 100%;
+	}
+	&:after {
+		height: 100%;
+		width: 100%;
+	}
+}
+/*caracteristicas*/
+#features {
+	background: #fff;
+	padding-top: 70px;
+	margin-bottom: 80px;
+}
+.intro {
+	h4 {
+		&:after {
+			content: '';
+			width: 60px;
+			height: 2px;
+			background: #2AAFC0;
+			position: absolute;
+			bottom: 0;
+			left: calc(50% - 30px);
+		}
+	}
+}
+.features-caption {
+	h3 {
+		font-size: 35px;
+		font-weight: bold;
+	}
+	h4 {
+		font-size: 30px;
+	}
+	p {
+		width: 70%;
+		margin: auto;
+		margin-top: 60px;
+		margin-bottom: 60px;
+	}
+}
+.features-row-2 {
+	margin-top: 40px;
+}
+.features-section-2 {
+	margin-top: 80px;
+}
+.features-section-2-col-1 {
+	background-position: center;
+	height: 500px;
+}
+.features-section-2-col-2 {
+	background-color: $background-color_3;
+	height: 500px;
+	padding: 30px;
+}
+.features-section-2-col-2__content {
+	width: 100%;
+	background-color: $background-color_4;
+	padding: 20px;
+	margin: auto;
+	height: 100%;
+	padding: 100px 10%;
+	-webkit-box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+	box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.08);
+	text-align: center;
+}
+/*sucursal*/
+#portfolio {
+	padding-top: 100px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+/*equipo de trabajo*/
+#teams {
+	padding-top: 100px;
+	background-color: $background-color_5;
+	width: 100%;
+	position: relative;
+	color: $color_1;
+	padding-bottom: 30px;
+	margin-top: 40px;
+	margin-bottom: 30px;
+}
+.text-center {
+	text-align: center !important;
+}
+.teams-heading {
+	span {
+		font-size: 1.25rem;
+		display: block;
+		text-transform: capitalize;
+		color: $color_2;
+		text-align: center;
+	}
+	h1 {
+		font-weight: 300;
+		text-align: center;
+	}
+}
+.heading_space {
+	margin-bottom: 4.125rem;
+}
+.teams-item {
+	background-color: $background-color_4;
+	height: 400px;
+	font-family: $font-family_1;
+	position: relative;
+	display: inline-block;
+	overflow: hidden;
+	margin: 20px;
+	min-width: 250px;
+	max-width: 290px;
+	width: 100%;
+	background-color: $background-color_4;
+	color: $color_3;
+	text-align: center;
+	font-size: 16px;
+	border-radius: 5px;
+	-webkit-box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+	box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	* {
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+	.profile-image {
+		padding: 15% 10% 0;
+		img {
+			max-width: 100%;
+			vertical-align: top;
+			position: relative;
+			border-radius: 50%;
+			max-width: 40%;
+		}
+	}
+	div {
+		padding: 5% 10% 15%;
+	}
+	h3 {
+		font-family: $font-family_2;
+		text-transform: uppercase;
+		font-size: 20px;
+		font-weight: 400;
+		line-height: 24px;
+		margin: 3px 0;
+	}
+	h5 {
+		font-weight: 400;
+		margin: 0;
+		text-transform: uppercase;
+		color: $color_4;
+		letter-spacing: 1px;
+	}
+	.icons {
+		i {
+			color: $color_5;
+			display: inline-block;
+			margin-right: 5px;
+			font-size: 1.5em;
+			&:hover {
+				color: $color_6;
+			}
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.teams-items-img {
+	img {
+		display: block;
+		width: 100%;
+	}
+}
+/*formulario de contacto v2*/
+.contact {
+	padding-top: 115px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	form {
+		margin: 3rem;
+	}
+}
+.container {
+	.map {
+		width: 100%;
+		height: 200px;
+	}
+}
+iframe {
+	width: 100%;
+	border: none;
+}
+.contact-icon {
+	text-align: center;
+	font-size: 35px;
+}
+.text-blue {
+	color: $color_7;
+}
+.contact-heading {
+	margin-top: 2rem;
+}
+.form-input-style {
+	border: none;
+	border-bottom-color: $border-bottom-color_1;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+	border-bottom-color: $border-bottom-color_1;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+	border-bottom: 1px solid #ddd;
+	box-shadow: none;
+	background-color: $background-color_6;
+	font-size: 13px;
+	height: 45px;
+}
+.form-input-style-message {
+	border: none;
+	border-bottom-color: $border-bottom-color_1;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+	border-bottom-color: $border-bottom-color_1;
+	border-bottom-style: none;
+	border-bottom-width: medium;
+	border-bottom: 1px solid #ddd;
+	box-shadow: none;
+	background-color: $background-color_6;
+	font-size: 13px;
+}
+@media (max-width: 705.98px) {
+	.teams-item-box {
+		margin: 0 auto;
+		width: 330px;
+	}
+	.contact {
+		p {
+			text-align: center;
+		}
+	}
+}
