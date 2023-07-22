@@ -1,70 +1,35 @@
 <?php
-//SE REQUIERE PHPMAILES + SMTP
-require("class.phpmailer.php");
-require("class.smtp.php");
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-$mail = new PHPMailer();
-$mail->isSMTP();
+require 'phpmailer/Exception.php';
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
 
-// SE ACTIVA LA CODIFICACION UTF-8 PARA SIGNOS
-$mail->CharSet = 'UTF-8';
+$mail = new PHPMailer(true);
 
-// SE INGRESA EL SERVIDOR SMTP Y EL PUERTO 465 PARA GMAIL ES EL 587
-$mail->Host = "smtp.gmail.com";
-$mail->Port = 587;
-$mail->SMTPAuth = true;
-$mail->SMTPSecure = true;
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;                      //Enable verbose debug output
+    $mail->isSMTP();                                            //Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
+    $mail->Username   = 'criosoguttest@gmail.com';                     //SMTP username
+    $mail->Password   = 'aleumyagctlojxhk';                               //SMTP password
+    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
+    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
-// INGRESAR CORREO Y PASSWORD
-$mail->Username = 'criosoguttest@gmail.com';
-$mail->Password = 'aleumyagctlojxhk';
+    //Recipients
+    $mail->setFrom('criosoguttest@gmail.com', 'Cristian Osorio');
+    $mail->addAddress('criosoguttest@gmail.com');     //Add a recipient
 
-// CORREO ELECTRONICO DE: CONTACTO@BLA...
-$mail->From = 'criosoguttest@gmail.com';
-// TITULO DEL CORREO A RECIBIR
-$mail->FromName = "Pan Gourmet Chile - Cotización";
-//
-$mail->AddAddress('criosoguttest@gmail.com', "PanGourmet");
-//$mail->AddAddress($_POST['email']);
-// CON COPIA
-//$mail->addCC('correo_x@gmail.com');
-// CON COPIA OCULTA
-//$mail->addBCC('correo_x@hotmail.cl');
+    //Content
+    $mail->isHTML(true);                                  //Set email format to HTML
+    $mail->Subject = 'Subject';
+    $mail->Body    = 'Body';
 
-$mail->WordWrap = 50;
-$mail->IsHTML(true);
-
-//TITULO DEL CORREO A RECIBIR (ASUNTO)
-$mail->Subject = "Cotización";
-//CUERPO DEL CORREO DESDE EL NOMBRE HASTA EL MENSAJE
-$mail->Body    = <<<EOT
-Nombre:	{$_POST['name']}<br/>
-Correo: {$_POST['email']}<br/>
-Teléfono: {$_POST['phone']}<br/>
-Asunto: {$_POST['subject']}<br/>
-Mensaje: {$_POST['message']}<br/>
-EOT;
-
-
-$mail->SMTPOptions = array(
-'ssl' => array(
-'verify_peer' => false,
-'verify_peer_name' => false,
-'allow_self_signed' => true
-)
-);
-
-
-if(!$mail->Send())
-
-{
-   echo "Error al enviar. <p>";
-   echo "Mailer Error: " . $mail->ErrorInfo;
-   exit;
+    $mail->send();
+    echo 'Mensaje enviado!';
+} catch (Exception $e) {
+    echo "Error al enviar... {$mail->ErrorInfo}";
 }
-//MENSAJE PARA EL CLIENTE INDICANDO MENSAJE ENVIADO
-echo "Mensaje enviado!";
-
-
-	
-?> 
