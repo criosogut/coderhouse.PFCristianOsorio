@@ -132,19 +132,19 @@
 
 /*sucursal*/
 #portfolio {
-  padding-top: 115px;
+  padding-top: 100px;
   margin-top: 30px;
   margin-bottom: 20px;
 }
 
 /*equipo de trabajo*/
 #teams {
+  padding-top: 100px;
   background-color: #27a599;
   width: 100%;
   position: relative;
   color: #ffffff;
   padding-bottom: 30px;
-  padding-top: 115px;
   margin-top: 40px;
   margin-bottom: 30px;
 }

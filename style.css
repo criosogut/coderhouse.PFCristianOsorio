@@ -25,7 +25,7 @@
 }
 /*03_CONTENEDOR-BIENVENIDO*/
 #nosotros_contenedor1 {
-  padding-top: 115px;
+  padding-top: 100px;
   margin-top: 30px;
   margin-bottom: 20px;
   text-align: center;
@@ -38,14 +38,14 @@
 }
 /*04_CONTENEDOR-NUESTROSPRODUCTOS*/
 #productos_contenedor1 {
-  padding-top: 115px;
+  padding-top: 100px;
   margin-top: 30px;
   margin-bottom: 20px;
   text-align: center;
 }
 /*05_CONTENEDOR-CLIENTES*/
 #clientes {
-  padding-top: 115px;
+  padding-top: 100px;
   margin-top: 30px;
   margin-bottom: 20px;
   text-align: center;
