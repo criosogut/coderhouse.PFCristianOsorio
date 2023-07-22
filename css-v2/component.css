@@ -11,13 +11,15 @@
 	-webkit-perspective: 1500px;
 	perspective: 1500px;
 }
-
+/*SUCURSALES_IMAGENES-MARGENDECONTENIDO*/
 .show {
-	padding-top: 80px;
+	padding-top: 50px;
+	margin-top: 30px;
+
 }
 
 .icon.close-content {
-    margin-top: 70px;
+    margin-top: 10px;
 }
 
 .grid {
@@ -103,6 +105,7 @@
 .grid figure img {
 	display: block;
 	width: 100%;
+
 }
 
 .content,
@@ -125,6 +128,8 @@
 }
 
 .loading {
+
+
 	opacity: 0;
 	z-index: 1;
 	background: transparent url(../img/preloader.gif) no-repeat center center;
@@ -177,11 +182,13 @@
 }
 
 .close-content {
+
+
 	position: fixed;
 	z-index: 1000;
 	top: 0;
-	right: 10px;
-	font-size: 1.6em;
+	right: -50px;
+	font-size: 4em; /*sucursal - tamaño cierre*/
 	color: #aaa;
 	cursor: pointer;
 	pointer-events: none;
@@ -192,7 +199,9 @@
 }
 
 .close-content:hover {
-	color: #999;
+
+
+	color: #6e0b0b;
 }
 
 .content > div.show ~ .close-content {
