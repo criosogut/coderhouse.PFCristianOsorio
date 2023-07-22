@@ -1,4 +1,13 @@
 <?php
+
+$name = $_POST["name"];
+$email = $_POST["email"];
+$phone = $_POST["phone"];
+$subject = $_POST["subject"];
+$message = $_POST["message"];
+
+$body = "Nombre: " . $name . "<br>Correo: " . $email . "<br>Telefono: " . $phone . "<br>Mensaje: " . $message;
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
