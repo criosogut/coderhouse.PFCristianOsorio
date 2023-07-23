@@ -1,7 +1,7 @@
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-// se requiere de estos tres archivos bajados desde github
+// se requiere de estos tres archivos bajados desde github - https://github.com/PHPMailer/PHPMailer
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -16,7 +16,7 @@ try {
     $mail->Host       = 'smtp.gmail.com';           //Set the SMTP server to send through
     $mail->SMTPAuth   = true;                       //Enable SMTP authentication
     $mail->Username   = 'criosoguttest@gmail.com';  //SMTP username
-    $mail->Password   = 'aleumyagctlojxhk';         // se habilita contraseña de aplicacion en gmail, contraseña temporal SMTP correoSMTPcontacto                               //SMTP password
+    $mail->Password   = 'aleumyagctlojxhk';         // se habilita contraseña de aplicacion en gmail, contraseña temporal SMTP correoSMTPcontacto, no utilizar contraseña de acceso de gmail
     $mail->SMTPSecure = 'tls';                      //Enable implicit TLS encryption
     $mail->Port       = 587;                        //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
