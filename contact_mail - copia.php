@@ -6,13 +6,9 @@ require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
 
-require 'phpmailer/PHPMailerAutoload.php';
-
 $mail = new PHPMailer(true);
 
-
 $autoresponder_subject = "Gracias por contactarnos";
-
 
 try {
     //Server settings
@@ -25,13 +21,18 @@ try {
     $mail->Password   = 'aleumyagctlojxhk';         // se habilita contraseña de aplicacion en gmail, contraseña temporal SMTP correoSMTPcontacto, no utilizar contraseña de acceso de gmail
     $mail->SMTPSecure = 'tls';                      //Enable implicit TLS encryption
     $mail->Port       = 587;                        //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+
     //Recipients
     $mail->setFrom('criosoguttest@gmail.com', 'Cotizacion');
     $mail->addAddress('criosoguttest@gmail.com');   //Add a recipient
     $mail->addCC('cosoriogut@gmail.com');           // con copia
+
     //Content
     $mail->isHTML(true); 
     //Set email format to HTML
+
+
+
     $mail->Subject = 'Cotización';
     $mail->Body    = <<<EOT
     Nombre:	{$_POST['name']}<br/>
@@ -40,13 +41,12 @@ try {
     Asunto: {$_POST['subject']}<br/>
     Mensaje: {$_POST['message']}<br/>
     EOT;
+
     $mail->send();
     echo 'Mensaje enviado!';
 
-    $autoresponder = new PHPMailer();
     $autoresponder->addAddress($email);
     $autoresponder->Subject = $autoresponder_subject;
-
 
 } catch (Exception $e) {
     echo "Error al enviar... {$mail->ErrorInfo}";
