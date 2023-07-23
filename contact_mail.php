@@ -33,9 +33,17 @@ try {
     $mail->addAddress('criosoguttest@gmail.com');     //Add a recipient
 
     //Content
-    $mail->isHTML(true);                                  //Set email format to HTML
-    $mail->Subject = 'Subject';
-    $mail->Body    = 'Body';
+    $mail->isHTML(true); 
+    //Set email format to HTML
+    $mail->Subject = 'Cotización';
+    $mail->Body    = <<<EOT
+    Nombre:	{$_POST['name']}<br/>
+    Correo: {$_POST['email']}<br/>
+    Teléfono: {$_POST['phone']}<br/>
+    Asunto: {$_POST['subject']}<br/>
+    Mensaje: {$_POST['message']}<br/>
+    EOT;
+
 
     $mail->send();
     echo 'Mensaje enviado!';
