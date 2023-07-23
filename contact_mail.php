@@ -5,15 +5,7 @@ use PHPMailer\PHPMailer\Exception;
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
-
-require 'phpmailer/PHPMailerAutoload.php';
-
 $mail = new PHPMailer(true);
-
-
-$autoresponder_subject = "Gracias por contactarnos";
-
-
 try {
     //Server settings
     $mail->SMTPDebug = 0;                           //Enable verbose debug output
@@ -42,12 +34,6 @@ try {
     EOT;
     $mail->send();
     echo 'Mensaje enviado!';
-
-    $autoresponder = new PHPMailer();
-    $autoresponder->addAddress($email);
-    $autoresponder->Subject = $autoresponder_subject;
-
-
 } catch (Exception $e) {
     echo "Error al enviar... {$mail->ErrorInfo}";
 }
