@@ -1,9 +1,7 @@
 <?php
-
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
-
+// se requiere de estos tres archivos bajados desde github
 require 'phpmailer/Exception.php';
 require 'phpmailer/PHPMailer.php';
 require 'phpmailer/SMTP.php';
@@ -12,19 +10,20 @@ $mail = new PHPMailer(true);
 
 try {
     //Server settings
-    $mail->SMTPDebug = 0;                      //Enable verbose debug output
-    $mail->isSMTP();                                            //Send using SMTP
-    $mail->CharSet = 'UTF-8'; // se habilita signos UTF-8
-    $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
-    $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-    $mail->Username   = 'criosoguttest@gmail.com';                     //SMTP username
-    $mail->Password   = 'aleumyagctlojxhk'; // se habilita contraseña de aplicacion en gmail, contraseña temporal SMTP correoSMTPcontacto                               //SMTP password
-    $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-    $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+    $mail->SMTPDebug = 0;                           //Enable verbose debug output
+    $mail->isSMTP();                                //Send using SMTP
+    $mail->CharSet = 'UTF-8';                       // se habilita signos UTF-8
+    $mail->Host       = 'smtp.gmail.com';           //Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                       //Enable SMTP authentication
+    $mail->Username   = 'criosoguttest@gmail.com';  //SMTP username
+    $mail->Password   = 'aleumyagctlojxhk';         // se habilita contraseña de aplicacion en gmail, contraseña temporal SMTP correoSMTPcontacto                               //SMTP password
+    $mail->SMTPSecure = 'tls';                      //Enable implicit TLS encryption
+    $mail->Port       = 587;                        //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
 
     //Recipients
     $mail->setFrom('criosoguttest@gmail.com', 'Cotizacion');
-    $mail->addAddress('criosoguttest@gmail.com');     //Add a recipient
+    $mail->addAddress('criosoguttest@gmail.com');   //Add a recipient
+    $mail->addCC('cosoriogut@gmail.com');           // con copia
 
     //Content
     $mail->isHTML(true); 
@@ -37,7 +36,6 @@ try {
     Asunto: {$_POST['subject']}<br/>
     Mensaje: {$_POST['message']}<br/>
     EOT;
-
 
     $mail->send();
     echo 'Mensaje enviado!';
